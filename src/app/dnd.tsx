@@ -2,7 +2,6 @@
 
 import React, { useState, DragEvent } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 enum Category {
   NEW='NEW',
@@ -74,7 +73,7 @@ type ColumnProps = {
 const Column = ({ title, headingColor, cards, column, setCards }: ColumnProps) => {
   const [active, setActive] = useState(false);
 
-  const handleDragStart = (e: DragEvent, card: any) => {
+  const handleDragStart = (e: DragEvent, card: initialCards) => {
     e.dataTransfer.setData("cardId", card.id);
   };
 
