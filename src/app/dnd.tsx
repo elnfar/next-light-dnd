@@ -190,8 +190,8 @@ type CardProps = {
   title: string;
   id: string;
   category: string;
-  handleDragStart: Function;
-};
+  handleDragStart:Function
+}
 
 const Card = ({ title, id, category, handleDragStart }: CardProps) => {
   return (
