@@ -65,9 +65,9 @@ const Board = ({ initialCards }: { initialCards: initialCards[] }) => {
 type ColumnProps = {
   title: string;
   headingColor: string;
-  cards: any[];
+  cards: initialCards[];
   column: string;
-  setCards: React.Dispatch<React.SetStateAction<any[]>>;
+  setCards: React.Dispatch<React.SetStateAction<initialCards[]>>;
 };
 
 const Column = ({ title, headingColor, cards, column, setCards }: ColumnProps) => {
@@ -90,7 +90,7 @@ const Column = ({ title, headingColor, cards, column, setCards }: ColumnProps) =
       let copy = [...cards];
       let cardToTransfer = copy.find((c) => c.id === cardId);
       if (!cardToTransfer) return;
-      cardToTransfer = { ...cardToTransfer, category: column };
+      cardToTransfer = { ...cardToTransfer, category: column as Category };
 
       copy = copy.filter((c) => c.id !== cardId);
       const moveToBack = before === "-1";
