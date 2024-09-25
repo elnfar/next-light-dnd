@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, DragEvent, ReactChild } from "react";
+import React, { useState, DragEvent } from "react";
 import { motion } from "framer-motion";
 
 import SyntaxHighlighter from "react-syntax-highlighter";
